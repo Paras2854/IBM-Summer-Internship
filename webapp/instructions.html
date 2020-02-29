@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Instructions</title>
+<link href="styles/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+Engineering Decision Support System
+</div>
+<div class="questionForm">
+<div>Please read the instructions carefully and then proceed to the test</div>
+<ul>
+<li>Read each question carefully</li>
+<li>You need to select one option in each question</li>
+<li>No option is right or wrong. Select the option that suits you the most</li>
+<li>There is no time limit for the test. It usually takes around 5-10 minutes to complete the test</li>
+<li>Press the Submit button after answering all the questions</li>
+</ul>
+<form method="get" action="displayQuestion.jsp">
+<div id="countdown"></div>
+</form>
+</div>
+<script>
+var timeleft = 10;
+var downloadTimer = setInterval(updateCounter,1000)
+function updateCounter(){
+	document.getElementById("countdown").innerHTML = "<h3>Your test will begin in "+timeleft+" seconds</h3>";
+	timeleft = timeleft - 1;
+	if(timeleft <= -1){
+		clearInterval(downloadTimer);
+		document.getElementById("countdown").innerHTML = "<input type='submit' value='Start Test'>"
+	}
+}
+</script>
+</body>
+</html>

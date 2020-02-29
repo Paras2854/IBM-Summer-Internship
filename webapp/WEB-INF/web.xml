@@ -1,0 +1,67 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>EvaluationServlet</servlet-name>
+  	<display-name>EvaluationServlet</display-name>
+  	<description></description>
+  	<servlet-class>dss.servlet.EvaluationServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SignUpServlet</servlet-name>
+  	<display-name>SignUpServlet</display-name>
+  	<description></description>
+  	<servlet-class>dss.servlet.SignUpServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DisplayChartServlet</servlet-name>
+  	<display-name>DisplayChartServlet</display-name>
+  	<description></description>
+  	<servlet-class>dss.servlet.DisplayChartServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<display-name>LoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>dss.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<display-name>LogoutServlet</display-name>
+  	<description></description>
+  	<servlet-class>dss.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>EvaluationServlet</servlet-name>
+  	<url-pattern>/result</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SignUpServlet</servlet-name>
+  	<url-pattern>/SignUp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>DisplayChartServlet</servlet-name>
+  	<url-pattern>/displayChart</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+  	<welcome-file>
+  	login.jsp
+  	</welcome-file>
+  </welcome-file-list>
+</web-app>
